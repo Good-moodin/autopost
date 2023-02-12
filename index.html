@@ -9,7 +9,7 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        var rss = 'https://cors-anywhere.herokuapp.com/https://www.indiatoday.in/rss/home';
+        var rss = 'http://cors-anywhere.herokuapp.com/corsdemo/https://www.indiatoday.in/rss/home';
         $.get(rss, function (data) {
             var $xml = $(data);
             $xml.find("item").each(function () {
