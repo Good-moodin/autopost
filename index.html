@@ -4,30 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .rss-container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .rss-item {
-            margin-bottom: 20px;
-        }
-        .rss-item h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .rss-item p {
-            font-size: 18px;
-        }
-    </style>
-    <title>RSS Feed Display</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="rss-container">
-        <div id="rss-feed"></div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         var rss = 'http://cors-anywhere.herokuapp.com/corsdemo/https://www.indiatoday.in/rss/home';
@@ -42,15 +21,7 @@
                         pubDate: $this.find("pubDate").text(),
                         author: $this.find("author").text()
                     }
-
-                var rssItem = '<div class="rss-item">' +
-                                '<h3><a href="' + item.link + '">' + item.title + '</a></h3>' +
-                                '<p>' + item.description + '</p>' +
-                                '<p>Published on: ' + item.pubDate + '</p>' +
-                                '<p>Author: ' + item.author + '</p>' +
-                              '</div>';
-
-                $('#rss-feed').append(rssItem);
+                console.log(item);
             });
         });
     </script>
