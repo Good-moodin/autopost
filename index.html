@@ -30,7 +30,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        var rss = 'https://cors-anywhere.herokuapp.com/corsdemo/https://www.indiatoday.in/rss/home';
+        var rss = 'https://cors-anywhere.herokuapp.com/corsdemo/https://www.indiatoday.in/rss/1206514';
         $.get(rss, function (data) {
             var $xml = $(data);
             $xml.find("item").each(function () {
