@@ -5,9 +5,10 @@
         <script type="text/javascript">
             // Define the function to get the blog posts from the RSS feed
             function getBlogPosts() {
-                // Create an AJAX request to the RSS feed
+                // Create an AJAX request to the proxy server
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", "https://zeenews.india.com/rss/india-national-news.xml", true);
+                xmlhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://www.indiatoday.in/rss/home", true);
+                xmlhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
                 xmlhttp.onreadystatechange = function() {
                     // Check the response status
                     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
@@ -43,6 +44,4 @@
             getBlogPosts();
         </script>
     </head>
-    <body>
-    </body>
-</html>
+    <body
